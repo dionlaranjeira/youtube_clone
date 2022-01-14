@@ -30,6 +30,16 @@ class _HomeState extends State<Home> {
         ],
       ),
       body: Container(),
+      bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.shifting,
+          currentIndex: 3,
+          fixedColor: Colors.red,
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home),label: "home", backgroundColor: Colors.red),
+            BottomNavigationBarItem(icon: Icon(Icons.whatshot),label: "Em alta",backgroundColor: Colors.orange),
+            BottomNavigationBarItem(icon: Icon(Icons.add_box),label: "Inscrições",backgroundColor: Colors.blue),
+            BottomNavigationBarItem(icon: Icon(Icons.library_add_rounded),label: "Biblioteca",backgroundColor: Colors.green),
+          ]),
     );
   }
 }
