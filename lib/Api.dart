@@ -9,7 +9,7 @@ const CHANNEL_ID = "UCVHFbqXqoYvEWM1Ddxl0QDg";
 const BASE_URL = "https://www.googleapis.com/youtube/v3/";
 
 class Api {
-  pesquisar(String pesquisa) async{
+  Future<List<Video>> pesquisar(String pesquisa) async{
     var url = "https://www.blockchain.com/ticker";
     HttpClient httpClient = new HttpClient();
     HttpClientRequest request = await httpClient.getUrl(Uri.parse(BASE_URL + "search"
@@ -28,7 +28,7 @@ class Api {
     int statusCode = await response.statusCode;
     httpClient.close();
 
-    if(statusCode == 200){
+    // if(statusCode == 200){
 
       Map<String, dynamic> respostaMap = json.decode(reply);
 
@@ -38,24 +38,11 @@ class Api {
           }
       ).toList();
 
-      for(var video in videos){
-        print(video.descricao);
-      }
+    return videos;
 
-      // for(var video in respostaMap["items"]){
-      //   print("Resultado:" + video.toString());
-      // }
+    // }
+    //
+    // return null;
 
-
-
-    }
-
-    // print("REPLY ->"+ reply);
-
-
-    // _preco =  "R\$ " + respostaMap["BRL"]["buy"].toString().replaceAll(".", ",");
-    // setState(() {
-    //   _preco;
-    // });
   }
 }
