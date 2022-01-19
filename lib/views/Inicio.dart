@@ -28,7 +28,7 @@ class _InicioState extends State<Inicio> {
         switch(snapshot.connectionState){
           case ConnectionState.none:
           case ConnectionState.waiting:
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
             break;
@@ -59,14 +59,14 @@ class _InicioState extends State<Inicio> {
                       ],
                     );
                   },
-                  separatorBuilder: (context, index) => Divider(
+                  separatorBuilder: (context, index) => const Divider(
                     height: 2,
                     color: Colors.grey,
                   ),
                   itemCount: snapshot.data!.length);
             }else{
-              return Center(
-                child: Text("Nenhum dado a ser exibido"),
+              return const Center(
+                child: Text("Nenhum dado a ser exibido."),
               );
             }
             break;
