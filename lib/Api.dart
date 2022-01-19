@@ -28,6 +28,7 @@ class Api {
     int statusCode = await response.statusCode;
     httpClient.close();
 
+    print("STATUS CODE-->" + statusCode.toString());
     // if(statusCode == 200){
 
       Map<String, dynamic> respostaMap = json.decode(reply);

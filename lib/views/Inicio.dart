@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_clone/Api.dart';
 import 'package:youtube_clone/model/Video.dart';
+import 'package:flutter_youtube/flutter_youtube.dart';
 
 class Inicio extends StatefulWidget {
-  const Inicio({Key? key}) : super(key: key);
+  String pesquisa;
+
+  Inicio(this.pesquisa);
 
   @override
   _InicioState createState() => _InicioState();
@@ -11,9 +14,9 @@ class Inicio extends StatefulWidget {
 
 class _InicioState extends State<Inicio> {
 
-  _listarVideos(){
+  _listarVideos(String pesquisa){
     Api api = Api();
-    return api.pesquisar("");
+    return api.pesquisar(pesquisa);
   }
 
   @override
@@ -23,7 +26,7 @@ class _InicioState extends State<Inicio> {
     api.pesquisar("");
 
     return FutureBuilder<List<Video>>(
-      future: _listarVideos(),
+      future: _listarVideos(widget.pesquisa),
       builder: (context, snapshot){
         switch(snapshot.connectionState){
           case ConnectionState.none:
@@ -41,22 +44,32 @@ class _InicioState extends State<Inicio> {
                     List<Video>? videos = snapshot.data;
                     Video video = videos![index];
 
-                    return Column(
-                      children: [
-                        Container(
-                          height: 200,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(video.imagem??""),
-                            )
+                    return GestureDetector(
+                      onTap: (){
+                        FlutterYoutube.playYoutubeVideoById(
+                            apiKey: CHAVE_YOUTUBE_API,
+                            videoId: video.id,
+                            autoPlay: true,
+                            fullScreen: true,
+                        );
+                      },
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 200,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: NetworkImage(video.imagem??""),
+                                )
+                            ),
                           ),
-                        ),
-                        ListTile(
-                          title: Text(video.titulo??""),
-                          subtitle: Text(video.canal??""),
-                        )
-                      ],
+                          ListTile(
+                            title: Text(video.titulo??""),
+                            subtitle: Text(video.canal??""),
+                          )
+                        ],
+                      ),
                     );
                   },
                   separatorBuilder: (context, index) => const Divider(

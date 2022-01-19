@@ -15,7 +15,7 @@ class CustomSearchDelegate extends SearchDelegate<String>{
   Widget? buildLeading(BuildContext context) {
     // TODO: implement buildLeading
     return IconButton(
-        onPressed: (){close(context, "teste");},
+        onPressed: (){close(context, "");},
         icon: Icon(Icons.arrow_back));
   }
 
@@ -29,8 +29,28 @@ class CustomSearchDelegate extends SearchDelegate<String>{
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    // print("resultado: digitado " + query);
+    /*
+    List<String>? lista = [];
+
+    if(query.isNotEmpty){
+      lista = ["Android", "Android navegação", "IOS", "Jogos"].where(
+          (texto) => texto.toLowerCase().startsWith(query.toLowerCase())).toList();
+
+          return ListView.builder(
+          itemCount: lista.length,
+          itemBuilder: (context, index){
+              return ListTile(
+                onTap: (){
+                  close(context, lista![index]);
+                },
+                title: Text(lista![index]),
+              );
+          });
+
+    }
+    */
     return Container();
+
   }
   
 }
