@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:youtube_clone/CustomSearchDelegate.dart';
 import 'package:youtube_clone/views/Biblioteca.dart';
 import 'package:youtube_clone/views/EmAlta.dart';
 import 'package:youtube_clone/views/Inicio.dart';
@@ -34,14 +35,11 @@ class _HomeState extends State<Home> {
         title: Image.asset("images/youtube.png", width: 100),
         actions: [
           IconButton(
-              onPressed: (){print("video");},
-              icon: const Icon(Icons.videocam)),
-          IconButton(
-              onPressed: (){print("pesquisar");},
+              onPressed: () async {
+                String? resultadoPesquisa = await showSearch(context: context, delegate: CustomSearchDelegate());
+                print("VALOR PESQUISADO-->"+ resultadoPesquisa!);
+                },
               icon: const Icon(Icons.search)),
-          IconButton(
-              onPressed: (){print("conta");},
-              icon: const Icon(Icons.account_circle)),
         ],
       ),
       body: Container(
