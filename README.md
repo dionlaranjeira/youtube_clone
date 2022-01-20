@@ -26,7 +26,7 @@ Clone do Youtube é um projeto desenvolvido em Flutter/Dart que tem como objetiv
 A imagem abaixo mostra as principais telas do aplicativo.
 
 <figure align="center">
-  <img src="https://github.com/dionlaranjeira/youtube_clone/blob/main/images/layout_app.png" alt="Layout do aplicativo" width="600">
+  <img src="https://github.com/dionlaranjeira/youtube_clone/blob/main/images/layout_app.png" alt="Layout do aplicativo">
   <figcaption>Tela inicial do aplicativo</figcaption>
 </figure>
 
