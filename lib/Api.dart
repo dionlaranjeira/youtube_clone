@@ -10,7 +10,6 @@ const BASE_URL = "https://www.googleapis.com/youtube/v3/";
 
 class Api {
   Future<List<Video>> pesquisar(String pesquisa) async{
-    var url = "https://www.blockchain.com/ticker";
     HttpClient httpClient = new HttpClient();
     HttpClientRequest request = await httpClient.getUrl(Uri.parse(BASE_URL + "search"
         "?part=snippet"
@@ -28,7 +27,7 @@ class Api {
     int statusCode = await response.statusCode;
     httpClient.close();
 
-    print("STATUS CODE-->" + statusCode.toString());
+
     // if(statusCode == 200){
 
       Map<String, dynamic> respostaMap = json.decode(reply);
