@@ -48,7 +48,7 @@ Além disto é bom ter um editor para trabalhar com o código, exemplo: [Android
 # Clone este repositório
 $ git clone https://github.com/dionlaranjeira/youtube_clone.git
 
-# Abra o projeto clonado com Android Studio 
+# Abra o projeto clonado com Android Studio ou outro editor de sua preferência
 
 # Instale as dependências
 $ flutter pub get
