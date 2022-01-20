@@ -1,6 +1,6 @@
-# Pokedex
+# Youtube Clone
 
-https://wakatime.com/@dionlaranjeira/projects/ctdehdljvh?start=2022-01-14&end=2022-01-20
+[![wakatime](https://wakatime.com/badge/user/16c43c19-b8cc-47b4-8504-d9db3204dc71/project/f522731b-c47a-4d62-b48a-47c905346670.svg)](https://wakatime.com/badge/user/16c43c19-b8cc-47b4-8504-d9db3204dc71/project/f522731b-c47a-4d62-b48a-47c905346670)
 <img alt="Flutter" src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white" />
 
 Tabela de conteúdos
