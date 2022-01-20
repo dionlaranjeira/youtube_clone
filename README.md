@@ -39,7 +39,7 @@ Abaixo são apresentados os passos necessários para que o App funcione.
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Flutter](https://flutter.dev/docs/get-started/install). 
-Além disto é bom ter um editor para trabalhar com o código como [Android Studio](https://developer.android.com/studio)
+Além disto é bom ter um editor para trabalhar com o código, exemplo: [Android Studio](https://developer.android.com/studio)
 
 #### 🎲 Rodando o Aplicativo
 
