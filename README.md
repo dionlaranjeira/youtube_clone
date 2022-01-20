@@ -23,8 +23,12 @@ Clone do Youtube é um projeto desenvolvido em Flutter/Dart que tem como objetiv
 ---
 
 ## 🎨 Layout
-O layout do projeto pode ser encontrado no link para o desafio.
+As imagens abaixo mostram as principais telas do aplicativo.
 
+<figure align="center">
+  <img src="https://github.com/dionlaranjeira/youtube_clone/blob/main/images/app1.jpeg" alt="Tela inical">
+  <figcaption>Tela inicial do aplicativo</figcaption>
+</figure>
 
 ---
 
@@ -44,8 +48,7 @@ Além disto é bom ter um editor para trabalhar com o código como [Android Stud
 # Clone este repositório
 $ git clone https://github.com/dionlaranjeira/youtube_clone.git
 
-# Acesse a pasta do projeto no terminal/cmd
-$ cd bytebank
+# Abra o projeto clonado com Android Studio 
 
 # Instale as dependências
 $ flutter pub get
